@@ -1,0 +1,49 @@
+<?php
+
+// ------------------------------------------
+// Differents variables for the web site
+
+$_SESSION["dirPhotos"]     = dirname($_SESSION['sheetname']) . "/photos";
+$_SESSION["dirDocuments"]  = "./data/instrumental/presentations";
+$_SESSION["dirTools"]      = "./utility";
+$_SESSION["ficPhotos"]     = $_SESSION["dirPhotos"] . "/photos_en.csv";
+// ------------------------------------------
+
+
+// ------------------------------------------
+// Menu
+if(!isset($_SESSION["xmlMenu"]))
+$_SESSION["xmlMenu"] = <<<EndMenu
+<menu name="main">
+  <entry name="" visible="true" default="true">
+    <titlePage></titlePage>
+  </entry>
+
+  <entry name="" visible="true">
+    <titlePage></titlePage>
+    <menu name="">
+      <entry name="" visible="true">
+        <titlePage></titlePage>
+        <menu></menu>
+      </entry>
+    </menu>
+  </entry>
+</menu>
+
+EndMenu;
+// ------------------------------------------
+
+
+
+// ------------------------------------------
+// Web pages content
+
+function categoryName() {
+  $webPage = new WebPage();
+  $webPage->docTitle    = "";
+  $webPage->metaWords   = "";
+  $webPage->contentPage = "";
+  return $webPage;
+}
+// ------------------------------------------
+?>

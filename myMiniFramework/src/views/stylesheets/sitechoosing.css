@@ -1,0 +1,158 @@
+/**************************/
+/* feuille de style       */
+/* sitechoosing_style.css */
+/* Pierre Contri          */
+/* cree le 11/11/2005     */
+/* mdf  le 05/08/2011     */
+/**************************/
+
+/* @import "global.css"; */
+/*
+html, body {
+  margin: 0px auto 0px auto;
+  text-align: center;
+}
+*/
+html, body {
+  height: 100%;
+  overflow: hidden;
+  border: 0px none;
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+/** body management for menu ie, ff **/
+html>body>#divCorps {
+  height: 90%;
+  height: -moz-calc(100% - 47px);
+  height: -webkit-calc(100% - 47px);
+  height: calc(100% - 47px);
+  z-index: 1;
+
+  font-size: 18pt;
+  position: relative;
+
+  width: 911px;
+  text-align: center;
+
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: rgb(235,235,235);
+
+  overflow: hidden;
+}
+
+html>body>#divCorps>#idPage {
+  height: 80%;
+  height: -moz-calc(100% - 40px);
+  height: -webkit-calc(100% - 40px);
+  height: calc(100% - 40px);
+  z-index: 1;
+
+  max-width: 911px;
+}
+
+#idPage {
+  position: relative;
+  overflow: auto;
+  text-align: center;
+
+  color: #507896;
+  background-color : rgb(235,235,235);
+}
+
+/** Link **/
+A {
+  text-align : left;
+  color : black;
+}
+
+A.selected:link {
+  text-decoration: none;
+}
+
+/*
+A.unselected {
+  color : #780A02;
+}
+*/
+A.unselected:hover {
+  font-style : italic;
+}
+
+.linkCategoryRight {
+  display: inline;
+}
+/** end link **/
+
+/** corps **/
+BODY {
+  color: #507896;
+  background-color: rgb(80,80,80);
+  font-size: 20pt;
+}
+
+P {
+  color: #507896;
+  background-color: rgb(235,235,235);
+}
+
+A {
+  border: 0px none;
+  text-decoration:none;
+  outline:none;
+}
+
+IMG.content {
+  height: 120px;
+  border: 0px none;
+}
+
+.categoryList {
+  display: inline;
+}
+
+.divCategory2 {
+  width: 33%;
+  height: 180px;
+  /*float: left;*/
+}
+
+/** Elements **/
+#divMenu {
+  display: none;
+  visibility: hidden;
+}
+
+#divTitlePage {
+  position: relative;
+  height: 40px;
+
+  border-bottom: 2px solid #507896;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 24pt;
+  font-style : italic;
+
+  z-index: 1;
+}
+
+.w3valid {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 30px;
+  margin-top: -32px;
+  text-align: center;
+  border: 0px none;
+  background-color: transparent;
+}
+
+.validPage, .aValidPage {
+  border: 0px none;
+  background-color: transparent;
+}

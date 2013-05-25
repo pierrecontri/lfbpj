@@ -1,0 +1,523 @@
+/**********************/
+/* feuille de style   */
+/* sitmus.css         */
+/* Pierre Contri      */
+/* cree le 11/11/2005 */
+/* mdf  le 29/02/2008 */
+/**********************/
+
+/* couleur image : a0ddff */
+
+/** Liens **/
+A {
+  text-align : left;
+  color: black;
+}
+
+A.aUnSelected {
+  color : #780A02;
+}
+
+A.aUnSelected:hover {
+  font-style : italic;
+}
+
+/** Listes **/
+UL {
+  text-align: left;
+}
+
+OL {
+  list-style-type: decimal;
+  text-align: left;
+}
+
+IMG  {
+  border: 3px solid #FFFFFF; 
+}
+
+HR {
+clear: both;
+width: 95%;
+border: 0px none; /* enleve toute bordure */
+border-bottom: 1px black solid; /* une seule bordure */
+height: 1px; /* pour IE */
+}
+
+/** corps **/
+BODY {
+  color: #000000;
+  font-family: sans-serif;
+  background-image: url(../../data/photos/ouessant/IMG_1783.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 10pt;
+  margin: auto;
+  width: 1067px;
+  background-color: #000000;
+}
+
+/** Paragraphe **/
+P, .paragrapheText {
+  text-align: left;
+  font-style: normal;
+  color: #000000;
+  padding: 0px;
+  margin: 0px;
+}
+
+/** Blocs **/
+DIV.menu {
+  float: left;
+  width: 160px;
+  height: 100px;
+  margin: -100px auto auto 0px;
+  border: 0px none;
+}
+
+DIV.tabs {
+  position: relative;
+  width: 160px;
+  margin: 0px auto auto 0px;
+  text-align: center;
+  font-size: 13px;
+  border: 0px none;
+  visibility: visible;
+  display: block;
+}
+
+DIV.selected, DIV.unselected {
+  position: relative;
+  width: 160px;
+  margin-top: -21px;
+  margin-left: 160px;
+  margin-right: -1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-top: 1px solid #507896;
+  border-left: 0px none;
+  border-right: 1px solid #507896;
+  border-bottom: 1px solid #507896;
+  text-align: left;
+  visibility: hidden;
+  display: block;
+  z-index: 3;
+}
+
+DIV.subtabs selected {
+  color : #780A02;
+  background-color: #D5DDE3;
+  opacity: 0.95;
+}
+
+DIV.subtabs unselected {
+  color: #808040;
+  background-color: #A3B7B9;
+  opacity: 0.85;
+}
+
+/** Tables **/
+TABLE.Contenu {
+  width : 90%;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+TD.ContenuPhoto {
+  text-align : center;
+  vertical-align : middle;
+  border : 1px dashed #8CA5AF;
+}
+
+TD.ContenuText {
+  text-align : left;
+  vertical-align : top;
+  border : 1px dashed #8CA5AF;
+}
+
+/** DIV **/
+DIV.Contenu, DIV.ContenuPhoto, DIV.ContenuText {
+  border : 0px none;
+  padding : 4px;
+}
+
+DIV.ContenuPhoto {
+  text-align : center;
+  vertical-align : middle;
+  margin: 4px;
+}
+
+DIV.ContenuText {
+  text-align : left;
+  vertical-align : top;
+  padding: 4px;
+}
+
+TD.ContenuVide {
+  text-align: left;
+  vertical-align: top;
+  border: 0px none;
+  padding: 2px;
+}
+
+/** Classes **/
+.unselected {
+  border : 0px none;
+  background-color: #A3B7B9;
+}
+
+DIV.unselected {
+  float: left;
+  border-top: 1px solid #507896;
+  border-left: 1px solid #507896;
+  width: 160px;
+  height: 19px;
+  opacity: 0.75;
+}
+
+.selected {
+  float: left;
+  color: black;
+  background-color: #D5DDE3;
+  text-align: center;
+  border: 0px none;
+  border-top: 1px solid #507896;
+  border-left: 1px solid #507896;
+  width: 160px;
+  height: 19px;
+  opacity: 0.85;
+}
+
+.onglet unselected {
+  color: black;
+  background-color: #507896;
+  text-align: center;
+  border: 0px none;
+}
+
+.onglet selected {
+  color: black;
+  background-color: #F5F5DC;
+  text-align: center;
+  border: 0px none;
+}
+
+.validPage, A.aValidPage {
+  border: 0px none;
+  background-color: transparent;
+}
+
+.btnsubmit {
+  color : rgb(120,10,2);
+  border-color: #6C8DA2;
+  background-color: #BECBC5;
+  border-style: solid;
+  border-width: thin;
+  width: 300px;
+  height: 20px;
+  text-align: center;
+}
+
+.btnDiapo {
+  color : rgb(120,10,2);
+  border-color: #6C8DA2;
+  background-color: #BECBC5;
+  border-style: solid;
+  border-width: thin;
+  height: 20px;
+  text-align: center;
+  margin: 5px;
+}
+
+.Contenu {
+  border-collapse: collapse;
+}
+
+.contenuObj {
+  float: left;
+  padding : 4px;
+}
+
+.libele {
+  width: 300px;
+  border: 1px solid #6E8FA3;
+  background-color: #D7DECF;
+  text-align : center;
+  margin: auto;
+}
+
+.titleCategory {
+  width: 100%;
+  text-align: center;
+  height: 20px;
+}
+
+/** Pictures **/
+DIV.Picture {
+  position: relative;
+  text-align : center;
+  width: 1000px;
+  height: 420px;
+  border: 0px none;
+  margin: auto;
+}
+
+.divPictureTelecommand {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  width: 380px;
+  height: 20px;
+  border: 0px none;
+  margin: auto;
+  display: block;
+  visibility: visible;
+}
+/*
+#divPictureContentViewer {
+  text-align : center;
+  border: 0px none;
+  margin: 0px auto;
+}
+*/
+
+.contenuPhoto {
+  text-align : center;
+  width : 670px;
+  height : 460px;
+  border : 0px none;
+  margin: auto;
+}
+
+DIV.Picture IMG {
+  margin: auto;
+  max-height: 390px;
+  max-width: 990px;
+}
+
+.photoImgTab {
+  margin: auto;
+  width: 380px;
+}
+
+DIV.fullScreenPicture {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 5;
+  background-color: black;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+}
+
+DIV.fullScreenPicture IMG {
+  max-height: 90%;
+  max-width: 90%;
+  margin: auto;
+}
+
+/** Elements **/
+#divTitlePage {
+  color: #507896;
+  background-color: transparent;
+  width: 1063px;
+  height: 100px;
+  background-image: url(../images/boats.gif);
+  background-repeat: no-repeat;
+  border: 0px none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24pt;
+  font-style : italic;
+  margin-top : 0px;
+}
+
+#divCorps {
+  text-align: center;
+  padding: 2px;
+  margin: 10px auto 10px auto;
+  background-color: white;
+}
+
+#divPictureCorps {
+  text-align: center;
+  width: 98%;
+  height: 98%;
+  border: 0px none;
+  margin: auto;
+}
+
+#divPictureTable {
+  text-align: center;
+  background-color: #D5DDE3;
+  width: 500px;
+  border: 0px none;
+  margin: auto;
+}
+
+#idPage {
+  max-height: 450px;
+  overflow: auto;
+  text-align: center;
+  margin-top: 2px;
+  padding: 10px;
+  color: black;
+  background-color : #D5DDE3;
+}
+
+#accesFile {
+  text-align : left;
+  border : 1px;
+  border-style : solid;
+  border-color : black;
+  padding : 10px;
+  margin : 0px;
+}
+
+/** Multimedia **/
+.buttonTel {
+  height: 20px;
+  width: 26px;
+  
+  color : black;
+  border-color: #6C8DA2;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+}
+
+.inputTel {
+  height: 14px;
+  font-size: 11px;
+  padding: 0px;
+}
+
+#bPreviousPhoto {
+  background-image: url(../images/multimedia/previous.gif);
+}
+
+#bRandomPhoto {
+  background-image: url(../images/multimedia/random.gif);
+}
+
+#bNextPhoto {
+  background-image: url(../images/multimedia/next.gif);
+}
+
+#bDelimentAuto {
+}
+
+.buttonTelAutoStart {
+  height: 20px;
+  width: 26px;
+  
+  color : rgb(120,10,2);
+  border-color: #6C8DA2;
+  background-color: #BECBC5;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+
+  background-image: url(../images/multimedia/play.gif);
+}
+
+.buttonTelAutoStop {
+  height: 20px;
+  width: 26px;
+  
+  color : rgb(120,10,2);
+  border-color: #6C8DA2;
+  background-color: #BECBC5;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+
+  background-image: url(../images/multimedia/stop.gif);
+}
+
+#inputPageNb {
+  width: 58px;
+}
+
+#boutonsPhotos {
+  text-align: center;
+  margin: 0px auto;
+}
+
+#isDiapo {
+  margin-bottom: 5px;
+}
+
+#imgAqua {
+  border: 0px none;
+  height: 400px;
+}
+
+#defilTxt {
+  width:100%;
+  background-color: #A3B7B9;
+  border-top: 1px solid #507896;
+}
+
+#basPage {
+  color : black;
+  background-color : #BBBBBB;
+  border-top : 1px;
+  border-color : rgb(80,120,150);
+  border-style : solid;
+  border-collapse : collapse;
+}
+
+#divValid, #divChangeStyle, .changeStyle {
+  text-align: center;
+  width: 100%;
+  /*padding-top: 5px;*/
+  text-align: center;
+  margin: auto;
+  background-color: transparent;
+  border: 0px none;
+}
+
+#idCategory {
+  display: inline;
+}
+
+#divPatienter {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  display: block;
+  z-index: 5;
+  background-color: black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#divPatienterIntern {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  margin-top: -150px;
+  margin-left: -150px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#textPatienter {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  background-color: #D5DDE3;
+}

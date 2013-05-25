@@ -1,0 +1,195 @@
+/**********************/
+/* feuille de style   */
+/* global.css         */
+/* Pierre Contri      */
+/* cree le 12/08/2011 */
+/* mdf  le 12/08/2011 */
+/**********************/
+
+@import "content/multimedia.css";
+@import "content/tables.css";
+@import "content/pictures.css";
+
+html, body {
+  height: 100%;
+  overflow: auto;
+  border: 0px none;
+  margin: 0px;
+  font-family: sans-serif;
+  font-size: 10pt;
+}
+
+form {
+  visibility: hidden;
+  display: none;
+}
+
+/** Separator **/
+HR {
+clear: both;
+width: 95%;
+border: 0px none; /* enleve toute bordure */
+border-bottom: 1px black solid; /* une seule bordure (sinon firefox met une bordure en haut ET en bas mais pas IE */
+height: 1px; /* pour IE */
+}
+
+/** Link **/
+A {
+  text-align : left;
+  color : black;
+}
+
+A.selected:link {
+  text-decoration: none;
+}
+
+/*
+A.unselected {
+  color : #780A02;
+}
+*/
+A.unselected:hover {
+  font-style : italic;
+}
+
+.linkCategoryRight {
+  display: inline;
+}
+/** end link **/
+
+/** Classes **/
+
+/** Listes **/
+UL {
+  text-align: left;
+}
+
+OL {
+  list-style-type: decimal;
+  text-align: left;
+}
+/** end Listes **/
+
+/** Containers **/
+DIV.Content, DIV.DocumentContent,
+DIV.TextContent, Div.MusicContent, DIV.DocumentsListContent {
+  border : 0px none;
+  padding : 4px;
+}
+/** end Containers **/
+
+/** Paragraphe **/
+P, .paragrapheText {
+  text-align: left;
+  font-style: normal;
+  color: #000000;
+  padding: 0px;
+  margin: 0px;
+}
+
+.Content {
+  border-collapse: collapse;
+}
+
+.ContentObj {
+  float: left;
+  width: 380px;
+  height: 300px;
+  vertical-align: middle;
+  border : 1px dashed #8CA5AF;
+}
+
+.libele {
+  width: 300px;
+  border: 1px solid #6E8FA3;
+  background-color: #D7DECF;
+  text-align : center;
+  margin: auto;
+}
+
+DIV.DocumentContent, DIV.TextContent {
+  text-align : left;
+  vertical-align : top;
+}
+/** end Paragraphe **/
+
+/** Buttons **/
+
+.btnsubmit {
+  color : rgb(120,10,2);
+  border-color: #6C8DA2;
+  background-color: #BECBC5;
+  border-style: solid;
+  border-width: thin;
+  width: 300px;
+  height: 20px;
+  text-align: center;
+}
+
+.btnDiapo {
+  color : rgb(120,10,2);
+  border-color: #6C8DA2;
+  background-color: #BECBC5;
+  border-style: solid;
+  border-width: thin;
+  height: 20px;
+  text-align: center;
+}
+
+.btnAcceuil {
+  padding: 4px;
+}
+/** end Buttons **/
+
+/** Patienter **/
+#divPatienter {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  display: block;
+  z-index: 5;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#divPatienterIntern {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  margin-top: -150px;
+  margin-left: -150px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 6;
+}
+
+#divManageForm {
+  visibility: hidden;
+  display: none;
+}
+
+#textPatienter {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  background-color: #D5DDE3;
+}
+/** end Patienter **/
+
+#basPage {
+  color : black;
+  background-color : #BBBBBB;
+  border-top : 1px;
+  border-color : rgb(80,120,150);
+  border-style : solid;
+  border-collapse : collapse;
+}
+/*
+#idCategory {
+  display: inline;
+}
+*/

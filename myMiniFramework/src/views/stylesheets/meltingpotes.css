@@ -1,0 +1,62 @@
+/**********************/
+/* feuille de style   */
+/* sitmus.css         */
+/* Pierre Contri      */
+/* cree le 11/11/2005 */
+/* mdf  le 13/08/2011 */
+/**********************/
+
+@import "global.css";
+@import "menu/top_menu.css";
+
+/** corps **/
+BODY {
+  color: #000000;
+  background-color: rgb(80,80,80);
+}
+
+P {
+  color: #507896;
+  background-color: rgb(235,235,235);
+}
+
+A {
+  color: #507896;
+}
+
+/** Menu **/
+.tab, .subtabs, .subtab {
+  border-color: #507896;
+}
+
+.tab.selected,
+.subtab.selected,
+a.selected {
+  color : #780A02;
+  background-color: #D5DDE3;
+}
+
+.tab.unselected,
+.subtab.unselected {
+  color: #808040;
+  background-color: #A3B7B9;
+}
+/** end menu **/
+
+/** Elements **/
+#divCorps {
+  width: 911px;
+  overflow: hidden;
+
+  text-align: center;
+  background-color: rgb(240,240,250);
+
+  padding: 0px 5px 5px 5px;
+  margin: 10px auto 10px auto;
+}
+
+#idPage {
+  color: black;
+  background-color : #D5DDE3;
+  border-color: #507896;
+}

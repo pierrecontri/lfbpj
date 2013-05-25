@@ -1,0 +1,57 @@
+/**********************/
+/* feuille de style   */
+/* helloworld.css     */
+/* Pierre Contri      */
+/* cree le 11/11/2005 */
+/* mdf  le 29/02/2008 */
+/**********************/
+
+@import "global/global.css";
+@import "content/pictures.css";
+
+/** corps **/
+BODY {
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 10pt;
+  margin: 0px;
+  background-color: black;
+}
+
+#divMenu {
+  visibility: hidden;
+  display: none;
+}
+
+/** Elements **/
+#divCorps {
+  width: 911px;
+  text-align: center;
+  padding: 5px;
+  margin: 10px auto 10px auto;
+  background-color: white;
+}
+
+#idPage {
+  height: 550px;
+  overflow: auto;
+  text-align: center;
+  margin-top: 5px;
+  padding: 10px;
+  color: black;
+  background-color : #D5DDE3;
+  z-index: 1;
+}
+
+#divTitlePage {
+  color: #507896;
+  width: 911px;
+  height: 161px;
+  background-image: url(../../images/StMathieu1.gif);
+  background-repeat: no-repeat;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24pt;
+  font-style : italic;
+  z-index: 1;
+}

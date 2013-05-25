@@ -1,0 +1,108 @@
+/**************************/
+/* feuille de style       */
+/* sitechoosing_style.css */
+/* Pierre Contri          */
+/* cree le 11/11/2005     */
+/* mdf  le 05/08/2011     */
+/**************************/
+
+@import "global.css";
+
+/** body management for menu ie, ff **/
+html>body>#divCorps {
+  height: 90%;
+  height: -moz-calc(100% - 44px);
+  height: calc(100% - 44px);
+  z-index: 1;
+}
+
+/** corps **/
+BODY {
+  color: #507896;
+  background-color: rgb(80,80,80);
+  font-size: 20pt;
+}
+
+P {
+  color: #507896;
+  background-color: rgb(235,235,235);
+}
+
+A {
+  border: 0px none;
+  text-decoration:none;
+  outline:none;
+}
+
+IMG.content {
+  height: 120px;
+}
+
+.categoryList {
+  display: inline;
+}
+
+.divCategory2 {
+  width: 33%;
+  height: 180px;
+  float: left;
+}
+
+/** Elements **/
+#divCorps {
+  font-size: 18pt;
+  position: relative;
+  top: 10px;
+  left: 0px;
+  width: 911px;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: rgb(235,235,235);
+}
+
+#idPage {
+  position: relative;
+  overflow: auto;
+  text-align: center;
+
+  color: #507896;
+  background-color : rgb(235,235,235);
+}
+
+#divMenu {
+  display: none;
+  visibility: hidden;
+}
+
+#divTitlePage {
+  position: relative;
+  height: 40px;
+
+  border-bottom: 2px solid #507896;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 24pt;
+  font-style : italic;
+
+  z-index: 1;
+}
+
+.w3valid {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 30px;
+  margin-top: -32px;
+  text-align: center;
+  border: 0px none;
+  background-color: transparent;
+}
+
+.validPage, .aValidPage {
+  border: 0px none;
+  background-color: transparent;
+}

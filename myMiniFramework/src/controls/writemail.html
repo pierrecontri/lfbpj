@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Writing mail</title>
+  </head>
+  <body>
+    <form action="sendmail.php" method="post">
+      <table>
+        <tr>
+          <td>From</td>
+          <td><input type="text" name="from" id="from" /></td>
+        </tr>
+        <tr>
+          <td>To</td>
+          <td><input type="text" name="to" id="to" /></td>
+        </tr>
+        <tr>
+          <td>Subject</td>
+          <td><input type="text" name="suject" id="suject" /></td>
+        </tr>
+        <tr>
+          <td>Body</td>
+          <td><input type="text" name="message" id="message" /></td>
+        </tr>
+      </table>
+      <input type="submit" value="Send" />
+    </form>
+  </body>
+</html>

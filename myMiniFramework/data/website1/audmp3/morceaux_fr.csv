@@ -1,0 +1,13 @@
+//fichier text des morceaux
+//colonne 1 id
+//colonne 2 titre
+//colonne 3 chemin
+//colonne 4 commentaires
+//colonne 5 sujet
+
+01 | Titre Chanson 1 | ./data/website1/audmp3/autres/machanson1.mp3 | commentaire chanson | mot-cle recherche
+02 | Titre Chanson 2 | ./data/website1/audmp3/autres/machanson2.mp3 | commentaire chanson | mot-cle recherche
+03 | Titre Chanson 3 | ./data/website1/audmp3/autres/machanson3.mp3 | commentaire chanson | mot-cle recherche
+04 | Titre Chanson 4 | ./data/website1/audmp3/autres/machanson4.mp3 | commentaire chanson | mot-cle recherche
+05 | Titre Chanson 5 | ./data/website1/audmp3/autres/machanson5.mp3 | commentaire chanson | mot-cle recherche
+06 | Titre Chanson 6 | ./data/website1/audmp3/autres/machanson6.mp3 | commentaire chanson | mot-cle recherche

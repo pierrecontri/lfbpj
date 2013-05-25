@@ -1,0 +1,64 @@
+/**********************/
+/* feuille de style   */
+/* menu.css           */
+/* Pierre Contri      */
+/* cree le 12/08/2011 */
+/* mdf  le 12/08/2011 */
+/**********************/
+
+ul.nav {
+  list-style: none;
+  margin:0px;
+  padding: 0px;
+}
+
+ul.nav>li {
+  margin:0px;
+  padding: 0px;
+}
+
+.nav.selected, .tab.selected {
+  opacity: 0.95;
+}
+
+.nav.unselected, .tab.unselected {
+  opacity: 0.90;
+}
+
+.nav {
+ z-index: 2;
+}
+
+.tab {
+  z-index: 3;
+}
+
+.titleCategory {
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  border: 0px none;
+  z-index: 1;
+}
+
+ul.nav>li.tab>ul.nav {
+  visibility: hidden;
+  z-index: 4;
+}
+
+.w3valid {
+  position: absolute;
+  top: 100%;
+  height: 30px;
+  margin-top: -30px;
+  text-align: center;
+  border: 0px none;
+  background-color: transparent;
+}
+
+.validPage, .aValidPage {
+  border: 0px none;
+  background-color: transparent;
+}

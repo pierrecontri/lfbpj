@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://pierre.contri.free.fr/sitemap.xml

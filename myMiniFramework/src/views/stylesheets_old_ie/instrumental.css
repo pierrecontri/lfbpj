@@ -1,0 +1,99 @@
+/**********************/
+/* feuille de style   */
+/* sitmus.css         */
+/* Pierre Contri      */
+/* cree le 11/11/2005 */
+/* mdf  le 29/02/2008 */
+/**********************/
+
+@import "global.css";
+@import "menu/left_menu.css";
+
+/** Body **/
+BODY {
+  color: #000000;
+  background-color: #365a79;
+}
+
+#divMenu {
+  width: 170px;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-image: url(../../images/telCategory4.gif);
+  background-repeat: no-repeat;
+}
+
+.subtabs {
+  margin-left: 169px;
+}
+
+/** Liens **/
+A {
+  color: #507896;
+}
+
+OL {
+  list-style-type: none;
+}
+
+/** Paragraphe **/
+P {
+  background-color: #D5DDE3;
+}
+
+/** Menu **/
+.tab, .subtabs, .subtab {
+  border-color: #507896;
+}
+
+.tab.selected,
+.subtab.selected,
+a.selected {
+  color : #780A02;
+  background-color: #D5DDE3;
+}
+
+.tab.unselected,
+.subtab.unselected {
+  color: #808040;
+  background-color: #A3B7B9;
+}
+/** end menu **/
+
+/** Elements **/
+#divCorps {
+  background-color: inherit;
+  margin-left: 195px;
+}
+
+#idPage {
+  text-align: center;
+  position: relative;
+
+  overflow: auto;
+
+  border: 2px solid #507896;
+  border-top: 0px none;
+
+  padding: 10px;
+  color: black;
+  background-color : #D5DDE3;
+}
+
+#divTitlePage {
+  position: relative;
+  color: black;
+
+  height: 40px;
+  background-color: #D5DDE3;
+
+  border: 2px solid #507896;
+  border-bottom: 0px none;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 24pt;
+  font-style : italic;
+}
