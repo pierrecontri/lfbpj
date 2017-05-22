@@ -13,6 +13,7 @@ IMG {
 
 .PictureContent {
   height : 320px;
+  max-width: 320px;
   text-align : center;
   vertical-align : middle;
   border : 0px none;
@@ -21,7 +22,7 @@ IMG {
 DIV.PictureDocument IMG {
   margin: auto;
   max-height: 270px;
-  max-width: 370px;
+  max-width: 320px;
 }
 
 TD.PictureContent {
@@ -46,9 +47,12 @@ DIV.fullScreenPicture {
 }
 
 DIV.fullScreenPicture IMG {
-  max-height: 90%;
-  max-width: 90%;
-  margin: 10px;
+  max-height: 80%;
+  max-width: 80%;
+
+  max-height: calc(100% - 50px);
+
+  margin: 0px;
 }
 
 DIV.picture {

@@ -139,7 +139,7 @@ DIV.category {
   visibility: hidden;
   display: none;
   z-index: 3;
-  opacity: 0.95;
+  /* opacity: 0.95; */
 }
 
 DIV.unSelected {

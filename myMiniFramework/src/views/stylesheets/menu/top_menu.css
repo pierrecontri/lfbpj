@@ -3,70 +3,64 @@
 /* top_menu.css       */
 /* Pierre Contri      */
 /* cree le 11/11/2005 */
-/* mdf  le 06/04/2012 */
+/* mdf  le 15/02/2015 */
 /**********************/
 
 @import "menu.css";
 
-/** body management for menu ie, ff **/
-html>body>#divCorps {
-  height: 100%;
-  height: -moz-calc(100% - 20px);
-  height: -webkit-calc(100% - 20px);
-  height: -o-calc(100% - 20px);
-  height: calc(100% - 20px);
-
+#containtDivMenu {
+  position: fixed;
+  top: 0px;
   z-index: 1;
+  display: block;
+  width: 100%;
 }
 
-html>body>#divCorps>#idPage {
+#divMenu {
+  display: inline-block;
+  visibility: visible;
+  width: 100%;
+}
+
+#divMiniMenu {
+  display: none;
+  visibility: hidden;
+}
+
+/** body management for menu ie, ff **/
+
+/*
+#idPage {
   position: relative;
+  clear: both;
 
   height: 80%;
-  height: -moz-calc(100% - 100px);
-  height: -webkit-calc(100% - 100px);
-  height: -o-calc(100% - 100px);
   height: calc(100% - 100px);
   z-index: 1;
 
-  width: inherits;
-
-  margin-top: -4px;
   display: block;
 
-  overflow: auto;
-  text-align: center;
-  padding: 10px 10px 5px 10px;
+  padding: 10px 0px 5px 0px;
 }
-
-#idPage {
-  border-right: 1px solid;
-  border-left: 1px solid;
-  border-bottom: 1px solid;
-}
-
+*/
+/*
 #divTitlePage {
   position: relative;
-  display: block;
   left: 0px;
   color: #507896;
-  padding: 10px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 24pt;
-  font-style : italic;
 }
-
+*/
 /** Menu **/
-div.nav>ul.nav>li.nav {
-  margin-left: -1px;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
+div.nav>ul.nav {
+  width: 100%;
+}
+
+div.nav>ul.nav>li.nav:last-child,
+#sitemapEntry {
+  float: right;
 }
 
 div.nav>ul.nav>li.nav {
-  /*float: left;*/
   list-style-position:inside;
 }
 
@@ -75,93 +69,48 @@ div.nav>ul.nav {
   text-align: left;
   vertical-align: baseline;
   width: 100%;
-  display: inline-block;
+  display: block;
 }
 
 div.nav>ul.nav>li.tab {
   float: left;
-  display: inline;
-  width: 160px;
-  height: 21px;
+  height: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: center;
   vertical-align: middle;
 }
 
-div.nav>ul.nav>li.tab.unselected {
-  margin-left: -1px;
-  border-left: 1px solid;
-  border-bottom: 1px solid;
-}
-
-div.nav>ul.nav>li.tab.unselected:first-child {
-  margin-left: 0px;
-  border-left: 0px none;
-}
-
-div.nav>ul.nav>li.tab.selected {
-  margin-top: -2px;
-  height: 23px;
-  border-top: 1px solid;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 0px none;
-}
-
-div.nav>ul.nav>li.tab.selected:first-child {
-  margin-left: 0px;
-  border-left: 1px solid;
-}
-
-div.nav>ul.nav>li.tab.selected + li.tab.unselected {
-  margin-left: 0px;
-  margin-right: 0px;
-  border-left: 0px none;
-}
-
-div.nav>ul.nav>li.tab:last-child {
-  margin-left: -1px;
-  float: right;
+div.nav>ul.nav>li.tab>a {
 }
 
 div.nav>ul.nav>li.tab>ul.nav {
   position: relative;
-  width: 160px;
-  margin-left: -1px;
-  margin-top: 5px;
+  width: 200px;
+  margin-left: 0px;
   margin-bottom: 0px;
-  margin-right: 0px;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-  border-top: 0px solid;
+  margin-right: -200px;
   text-align: left;
   visibility: hidden;
   display: none;
   vertical-align: middle;
+  left: -20px;
+  top: 13px;
 }
 
 div.nav>ul.nav>li.tab>ul.nav>li.tab {
   width: 100%;
-  height: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 17px;
   text-align: left;
   vertical-align: middle;
   border-bottom: 1px dotted;
 }
 
-div.nav>ul.nav>li.tab>ul.nav>li.tab:last-child {
-  border-bottom: 0px none;
-}
-
-div.nav>ul.nav>li.tab>ul.nav>li.tab>a {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .titleCategory.selected {
   width: 100%;
   border: 0px none;
-}
-
-.w3valid {
-  width: 100%;
 }

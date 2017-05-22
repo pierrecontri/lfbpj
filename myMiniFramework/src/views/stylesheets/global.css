@@ -3,20 +3,29 @@
 /* global.css         */
 /* Pierre Contri      */
 /* cree le 12/08/2011 */
-/* mdf  le 12/08/2011 */
+/* mdf  le 15/02/2015 */
 /**********************/
 
 @import "content/multimedia.css";
-@import "content/tables.css";
 @import "content/pictures.css";
+@import "content/patienter.css";
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  /*overflow: auto;*/
   border: 0px none;
   margin: 0px;
-  font-family: sans-serif;
-  font-size: 10pt;
+  padding: 0px;
+  font-family: Calibri, "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 11pt;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
 }
 
 form {
@@ -35,23 +44,24 @@ height: 1px; /* pour IE */
 
 /** Link **/
 A {
-  text-align : left;
+  /*text-align : left;*/
   color : black;
-}
-
-A.selected:link {
   text-decoration: none;
 }
 
-/*
-A.unselected {
-  color : #780A02;
+A:hover {
+  text-decoration: underline;
 }
-*/
+
+A.selected:link,
+A.unselected:link {
+  text-decoration: none;
+}
+/*
 A.unselected:hover {
   font-style : italic;
 }
-
+*/
 .linkCategoryRight {
   display: inline;
 }
@@ -79,11 +89,37 @@ DIV.TextContent, Div.MusicContent, DIV.DocumentsListContent {
 }
 /** end Containers **/
 
-/** Paragraphe **/
-P, .paragrapheText {
+P, .paragrapheText, CODE {
   text-align: left;
   font-style: normal;
-  color: #000000;
+  padding: 0px;
+  margin: 0px;
+}
+
+code>pre {
+  border: 1px dashed;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+
+}
+
+.jumbotron {
+  border-radius: 6px;
+  padding: 15px;
+  color: inherit;
+  background-color: #eee;
+}
+
+.jumbotron h1 {
   padding: 0px;
   margin: 0px;
 }
@@ -95,31 +131,40 @@ P, .paragrapheText {
 
 .ContentObj {
   /*float: left;*/
-  width: 380px;
+  width: 330px;
   /*height: 300px;*/
   display: inline-block;
   vertical-align: top;
   padding: 2px;
-  border : 1px dashed #8CA5AF;
+  border: 0px none;
   border-collapse: collapse;
 }
 
+.ContentObj ~ code {
+  width: 100%;
+  display: block;
+}
+
 .libele {
-  width: 300px;
-  border: 1px solid #6E8FA3;
-  background-color: #D7DECF;
+  width: 320px;
+  border-left: 1px solid #6E8FA3;
+  border-bottom: 1px solid #6E8FA3;
   text-align : center;
   margin: auto;
 }
 
-DIV.DocumentContent, DIV.TextContent {
+DIV.DocumentContent, DIV.TextContent, DIV.ScriptContent {
   text-align : left;
   vertical-align : top;
+}
+
+code.script {
+  display : none;
+  visibility: hidden;
 }
 /** end Paragraphe **/
 
 /** Buttons **/
-
 .btnsubmit {
   color : rgb(120,10,2);
   border-color: #6C8DA2;
@@ -130,66 +175,4 @@ DIV.DocumentContent, DIV.TextContent {
   height: 20px;
   text-align: center;
 }
-
-.btnDiapo {
-  color : rgb(120,10,2);
-  border-color: #6C8DA2;
-  background-color: #BECBC5;
-  border-style: solid;
-  border-width: thin;
-  height: 20px;
-  text-align: center;
-}
-
-.btnAcceuil {
-  padding: 4px;
-}
 /** end Buttons **/
-
-/** Patienter **/
-#divPatienter {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  display: block;
-  z-index: 5;
-  text-align: center;
-  vertical-align: middle;
-}
-
-#divPatienterIntern {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  margin-top: -150px;
-  margin-left: -150px;
-  text-align: center;
-  vertical-align: middle;
-  z-index: 6;
-}
-
-#divManageForm {
-  visibility: hidden;
-  display: none;
-}
-
-#textPatienter {
-  text-align: center;
-  vertical-align: middle;
-  width: 100%;
-  background-color: #D5DDE3;
-}
-/** end Patienter **/
-
-#basPage {
-  color : black;
-  background-color : #BBBBBB;
-  border-top : 1px;
-  border-color : rgb(80,120,150);
-  border-style : solid;
-  border-collapse : collapse;
-}

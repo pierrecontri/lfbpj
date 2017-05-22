@@ -20,6 +20,16 @@
   visibility: visible;
 }
 
+.btnDiapo {
+  color : rgb(120,10,2);
+  border-color: #6C8DA2;
+  background-color: #BECBC5;
+  border-style: solid;
+  border-width: thin;
+  height: 20px;
+  text-align: center;
+}
+
 /** Multimedia **/
 .buttonTel {
   height: 20px;

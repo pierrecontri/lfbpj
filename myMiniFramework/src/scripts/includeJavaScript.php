@@ -1,16 +1,15 @@
 <?php
 
-function printJavaScript($dirName) {
+function printJavaScript($dirName, $urlFile) {
   $strInclude = "";
+
   $fdir = opendir($dirName);
   if($fdir) {
     while($ficName = readdir($fdir)) {
       $fInfo = pathinfo($ficName);
       if($fInfo['extension'] == "js")
         $strInclude .= <<<EndIncludeScript
-    <script type="text/javascript" src="{$dirName}/{$ficName}">
-      alert('Erreur chargement fichier {$ficName}');
-    </script>
+    <script type="text/javascript" src="{$urlFile}/{$ficName}"></script>
 
 EndIncludeScript;
     }
@@ -18,5 +17,4 @@ EndIncludeScript;
   }
   return $strInclude;
 }
-
 ?>

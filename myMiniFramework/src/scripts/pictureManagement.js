@@ -1,7 +1,7 @@
-TAILLE_HSCROLL = 40;
-TAILLE_VSCROLL = 40;
-MARGE_WITHOUT_SCROLL = 40;
-TAILLE_SYSEXPLOIT = 100;
+var TAILLE_HSCROLL = 40;
+var TAILLE_VSCROLL = 40;
+var MARGE_WITHOUT_SCROLL = 40;
+var TAILLE_SYSEXPLOIT = 100;
 
 var isIE = (document.all)?1:0;
 
@@ -33,7 +33,7 @@ function getSizeScreenDoc(docVar) {
 
 function getSizeInnerScreen() {
   var myWidth = 0, myHeight = 0;
-  if( typeof( window.innerWidth ) == 'number' ) {
+  if( typeof( window.innerWidth ) === "number" ) {
     //Non-IE
     myWidth = window.innerWidth;
     myHeight = window.innerHeight;
@@ -51,7 +51,7 @@ function getSizeInnerScreen() {
 
 function getScrollXY() {
   var scrOfX = 0, scrOfY = 0;
-  if( typeof( window.pageYOffset ) == 'number' ) {
+  if( typeof( window.pageYOffset ) === "number" ) {
     //Netscape compliant
     scrOfY = window.pageYOffset;
     scrOfX = window.pageXOffset;
@@ -68,24 +68,29 @@ function getScrollXY() {
 }
 
 function switchDiaporama() {
-  var isDiapo = document.getElementById('isDiaporama');
   var arrayObj = document.getElementById('contentObjects');
   var divPict = document.getElementById('divPictureContent');
   var imgPict = document.getElementById('pictureImg');
+  var isDiapo = document.getElementById('isDiaporama');
   var buttonDiapo = document.getElementById('isDiapo');
 
-  if(!(isDiapo && arrayObj && divPict && buttonDiapo && imgPict))
+  if(!(arrayObj && divPict && imgPict)) {
+    alert("No picture management control present !");
     return false;
+  }
 
-  // change value in dynamic
-  isDiapo.value = (isDiapo.value == 1)?0:1;
+  if(!(isDiapo && buttonDiapo)) {
+    // change value in dynamic
+    isDiapo.value = (isDiapo.value == 1)?0:1;
 
-  // calcul for viewing
-  var valDiapo = (isDiapo.value == 1);
-  buttonDiapo.value = "Switch to the pictures " + ((valDiapo)?"table":"slideshow");
+    // calcul for viewing
+    var valDiapo = (isDiapo.value == 1);
+    buttonDiapo.value = "Switch to the pictures " + ((valDiapo)?"table":"slideshow");
+  }
+
 
   // check the picture containt
-  if(imgPict.alt == "empty") {
+  if(imgPict.alt === "empty") {
     load_picture('pictureImg', 'objElem', 'first');
   }
   divPict.style.visibility = (valDiapo)?'visible':'hidden';
@@ -105,7 +110,7 @@ function print_picture(nomPhoto) {
 
   var img = new Image();
   img.onload = function() {
-    param = "top=0px, left=0px, width=" + screen.width + "px, height=" + screen.height + "px, toolbar=0, menubar=0, scrollbars=3, resizable=0, status=0, location=0"
+    param = "top=0px, left=0px, width=" + screen.width + "px, height=" + screen.height + "px, toolbar=0, menubar=0, scrollbars=3, resizable=0, status=0, location=0";
     docPhoto = document.open("about:blank", "photo", param);
 
     var ratio = 1.0;
@@ -141,7 +146,7 @@ function load_picture(nameImgContenuPhoto, nameInputListePhotos, sens) {
   affichePatienter();
   
   // verifier qu'il y a des photos dans la liste
-  if(nbPictures == 0) {
+  if(nbPictures === 0) {
     alert("Pictures not found on the server");
     return false;
   }
@@ -173,7 +178,7 @@ function load_picture(nameImgContenuPhoto, nameInputListePhotos, sens) {
     case 'last' :
       pictureObj = getPreviousPicture(listPhotos, null);
       break;
-	default :
+    default :
       pictureObj = getNextPicture(listPhotos, null);
       break;
   };
@@ -214,9 +219,9 @@ function show_picture_fullScreen(pictureName, pictureAlt) {
   }
 
   if(isIE)
-    divPict.onclick = function () { hide_div2(divContentPict); };
+    divPict.onclick = function () { hide_div2(divContentPict); /* bug chrome */ cachePatienter(); };
   else
-    divPict.addEventListener('click', function (e) { hide_div2(divContentPict); }, false);
+    divPict.addEventListener('click', function (e) { hide_div2(divContentPict); /* bug chrome */ cachePatienter(); }, false);
 
   // recuperation des dimensions du cadre
   var sizeScreen = getSizeInnerScreen();

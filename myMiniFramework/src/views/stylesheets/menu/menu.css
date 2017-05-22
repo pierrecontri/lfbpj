@@ -3,8 +3,18 @@
 /* menu.css           */
 /* Pierre Contri      */
 /* cree le 12/08/2011 */
-/* mdf  le 05/2012    */
+/* mdf  le 08/02/2015 */
 /**********************/
+
+#divTitlePage>DIV>A:link {
+  text-decoration: none;
+}
+
+
+#divMiniMenu {
+  display: none;
+  visibility: hidden;
+}
 
 ul.nav {
   list-style: none;
@@ -18,19 +28,40 @@ ul.nav>li {
 }
 
 .nav.selected, .tab.selected {
-  opacity: 0.95;
+  /* opacity: 0.95; */
 }
 
 .nav.unselected, .tab.unselected {
-  opacity: 0.90;
+  /* opacity: 0.90; */
 }
 
-.nav {
- z-index: 2;
-}
-
-.tab {
+/* Menu management */
+div.nav>ul.nav {
   z-index: 3;
+}
+
+div.nav>ul.nav>li.nav {
+  z-index: 4;
+}
+
+div.nav>ul.nav>li.nav>ul.nav {
+  display: none;
+  visibility: hidden;
+  z-index: 5;
+}
+
+div.nav>ul.nav>li.nav>ul.nav>li.nav {
+  z-index: 6;
+}
+
+div.nav>ul.nav>li.tab>ul.nav>li.tab>a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+li.tab>a {
+  background-color: transparent;
+  /*height: 20px;*/
 }
 
 .titleCategory {
@@ -41,24 +72,4 @@ ul.nav>li {
   width: 100%;
   border: 0px none;
   z-index: 1;
-}
-
-ul.nav>li.tab>ul.nav {
-  visibility: hidden;
-  z-index: 4;
-}
-
-.w3valid {
-  position: absolute;
-  top: 100%;
-  height: 25px;
-  margin-top: -25px;
-  text-align: center;
-  border: 0px none;
-  background-color: transparent;
-}
-
-.validPage, .aValidPage {
-  border: 0px none;
-  background-color: transparent;
 }

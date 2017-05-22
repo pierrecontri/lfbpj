@@ -14,9 +14,14 @@ var bAffichagePatienter = false;
 function patiente()
 {
   affichePatienter();
+/*
+// code wrote in 2003
+// stop to run in 2012
+// for new generation of navigator (smartphone, ...) it is so complex
   var divp = document.getElementById('divPatienter');
   if (divp != null) op(divp, 0);
   progressOpacity('divPatienter', 50, 0, 70);
+*/
 }
 
 function progressOpacity(elementDivName, tpsTimeout, opacityStart, opacityEnd)
@@ -71,7 +76,7 @@ function createPatienter()
   var divpatientez = document.createElement('divPatienter');
   divpatientez.setAttribute("id", "divPatienter");
   divpatientez.setAttribute("name", "divPatienter");
-  var contentPatienter = "<div id=\"divPatienterIntern\"><img src=\"./src/images/hourglass2.gif\" alt=\"patiente\"/><br /><p id=\"textPatienter\">Merci de patienter pendant le chargement de la page</p></div>";
+  var contentPatienter = "<div id=\"divPatienterIntern\"><img src=\"./src/images/wait.gif\" alt=\"Please, wait ...\"/></div>";
   divpatientez.innerHTML = contentPatienter;
   document.body.appendChild(divpatientez);
   return divpatientez;

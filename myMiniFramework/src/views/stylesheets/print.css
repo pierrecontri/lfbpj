@@ -5,7 +5,6 @@
 
 #divTitlePage {
   position: relative;
-  height: 40px;
 
   text-align: center;
   font-weight: bold;
@@ -13,21 +12,19 @@
   font-style : italic;
 }
 
-#divMenu, #divValid {
+#divMenu, #divMiniMenu,#divValid {
   display : none;
   visibility: hidden;
 }
 
 #idPage {
-  text-align: center;
+  text-align: left;
   position: relative;
 
-  border-left: 2px solid #507896;
-  border-top: 2px solid #507896;
+  /* color: #507896; */
+}
 
-  margin-left: 10px;
-  padding: 10px;
-
-  color: #507896;
-  background-color : rgb(235,235,235);
+code.script {
+  display : block;
+  visibility: visible;
 }

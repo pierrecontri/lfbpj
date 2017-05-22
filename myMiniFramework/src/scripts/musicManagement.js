@@ -1,3 +1,4 @@
+
 function listen(fileSoundName,soundName,soundComment) {
   paramSafari = "width=300, height=130, toolbar=0, menubar=0, scrollbars=3, resizable=1, status=0, location=0";
   paramNetscape = "width=400, height=180, toolbar=0, menubar=0, scrollbars=3, resizable=1, status=0, location=0";
