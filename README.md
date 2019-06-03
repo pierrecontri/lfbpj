@@ -15,4 +15,4 @@ Many time preparing, but now, I savor the simplicity for used my site.
 
 ## Documentation
 
-I wrote a book for the complete documentation. You can found it on my personnal web site.
+I wrote a book for the complete documentation. You can found it on the source code ![eBook myMiniFramework](book/myMiniFramework_eBook.pdf)
